@@ -1,3 +1,24 @@
-[gd_scene format=3 uid="uid://bmlred8w3u8h2"]
+[gd_scene load_steps=4 format=3 uid="uid://bmlred8w3u8h2"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cjo6d"]
+size = Vector2(100, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t7nah"]
+albedo_color = Color(1, 0.376978, 0.197335, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_6crx0"]
+material = SubResource("StandardMaterial3D_t7nah")
 
 [node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_cjo6d")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.767132, -0.503343, 0.397687, -1.49012e-08, 0.619943, 0.784647, -0.64149, -0.601927, 0.475578, 2.52529, 3.15531, 2.48142)
+
+[node name="Target" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Target"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.31164, 1, -5.6613)
+mesh = SubResource("CapsuleMesh_6crx0")
