@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmlred8w3u8h2"]
+[gd_scene load_steps=5 format=3 uid="uid://bmlred8w3u8h2"]
+
+[ext_resource type="PackedScene" uid="uid://2aasfosiul4w" path="res://Scenes/GunSystem/gun_point.tscn" id="1_yevc5"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_cjo6d"]
 size = Vector2(100, 100)
@@ -22,3 +24,7 @@ transform = Transform3D(0.767132, -0.503343, 0.397687, -1.49012e-08, 0.619943, 0
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Target"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.31164, 1, -5.6613)
 mesh = SubResource("CapsuleMesh_6crx0")
+
+[node name="GunPoint" parent="." instance=ExtResource("1_yevc5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+script = null
