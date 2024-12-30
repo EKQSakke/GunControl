@@ -9,7 +9,7 @@ albedo_color = Color(0.544974, 0.544974, 0.544974, 1)
 material = SubResource("StandardMaterial3D_1y3ed")
 size = Vector2(100, 100)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_b2sri"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_5utuu"]
 size = Vector3(100, 1, 100)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t7nah"]
@@ -24,15 +24,14 @@ material = SubResource("StandardMaterial3D_t7nah")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0488572, -0.242027, -0.0237212)
 mesh = SubResource("PlaneMesh_cjo6d")
 
-[node name="Area3D" type="Area3D" parent="MeshInstance3D"]
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-shape = SubResource("BoxShape3D_b2sri")
+shape = SubResource("BoxShape3D_5utuu")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.381071, -0.623424, 0.682736, 0, 0.738455, 0.674302, -0.924546, -0.256957, 0.281403, 4.64, 5.665, -0.324)
-fov = 73.2
 
 [node name="Target" type="Node3D" parent="."]
 
